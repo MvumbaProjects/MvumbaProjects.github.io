@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="MVUMBA Projects (Pty) Ltd — cleaning consumables, uniforms and workwear, procurement support, and cleaning services.">
+<title>MVUMBA Projects (Pty) Ltd | Reliable Supply. Professional Service.</title>
+<style>
+:root{--navy:#142d4e;--navy2:#203f65;--gold:#c7a34a;--ink:#202a36;--muted:#657184;--light:#f4f6f8;--white:#fff;--line:#e1e6ec}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.65;background:#fff}
+a{color:inherit}
+.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:78px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.mark{width:46px;height:46px;border-radius:10px;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-weight:800;letter-spacing:-1px;border:2px solid var(--gold)}
+.brand-name{font-size:1rem;font-weight:800;letter-spacing:.04em;color:var(--navy);line-height:1.2}
+.brand-sub{font-size:.69rem;letter-spacing:.12em;color:var(--muted);margin-top:4px}
+nav{display:flex;align-items:center;gap:24px}
+nav a{text-decoration:none;font-weight:700;font-size:.9rem;color:#344256}
+nav a:hover{color:var(--gold)}
+.btn{display:inline-block;padding:12px 18px;border-radius:7px;background:var(--gold);color:var(--navy);font-weight:800;text-decoration:none;border:0;cursor:pointer}
+.btn:hover{filter:brightness(.96)}
+.btn-outline{background:transparent;color:white;border:1px solid rgba(255,255,255,.65)}
+.menu{display:none;background:none;border:1px solid var(--line);padding:8px 10px;border-radius:6px;font-size:1rem}
+.hero{background:linear-gradient(115deg,rgba(13,35,62,.97),rgba(31,62,97,.93));color:#fff;overflow:hidden;position:relative}
+.hero:after{content:"";position:absolute;width:430px;height:430px;border:1px solid rgba(199,163,74,.28);border-radius:50%;right:-90px;top:-120px;box-shadow:0 0 0 50px rgba(199,163,74,.04),0 0 0 100px rgba(199,163,74,.03)}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:center;padding:88px 0;position:relative;z-index:1}
+.eyebrow{color:var(--gold);font-weight:800;letter-spacing:.16em;text-transform:uppercase;font-size:.78rem}
+h1{font-size:clamp(2.4rem,5vw,4.3rem);line-height:1.08;letter-spacing:-.04em;margin:16px 0 20px}
+.hero p{font-size:1.1rem;color:#e2e8f0;max-width:620px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:28px;backdrop-filter:blur(5px)}
+.hero-card h2{font-size:1.2rem;margin:0 0 16px;color:var(--gold)}
+.hero-card ul{padding-left:20px;margin:0;color:#f1f4f8}
+.hero-card li{margin:10px 0}
+.trust{border-bottom:1px solid var(--line);background:#fff}
+.trust-row{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:22px 0}
+.trust-item{display:flex;align-items:center;gap:12px;color:var(--navy);font-weight:700}
+.icon{width:36px;height:36px;border-radius:9px;background:#f5eedc;color:var(--navy);display:grid;place-items:center;font-weight:900;flex-shrink:0}
+section{padding:76px 0}
+.section-head{max-width:720px;margin-bottom:32px}
+.section-head .eyebrow{color:#9b7927}
+h2{font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.15;letter-spacing:-.025em;color:var(--navy);margin:10px 0 14px}
+.section-head p{color:var(--muted);margin:0}
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.service{border:1px solid var(--line);border-radius:12px;padding:26px;background:#fff;transition:transform .2s,box-shadow .2s}
+.service:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(20,45,78,.08)}
+.service .icon{width:44px;height:44px;margin-bottom:16px}
+.service h3{color:var(--navy);margin:0 0 8px;font-size:1.15rem}
+.service p{color:var(--muted);margin:0}
+.about{background:var(--light)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.about-panel{background:var(--navy);color:white;border-radius:16px;padding:32px;position:relative;overflow:hidden}
+.about-panel:before{content:"";position:absolute;width:180px;height:180px;border:1px solid rgba(199,163,74,.45);border-radius:50%;right:-55px;bottom:-70px}
+.about-panel h3{color:var(--gold);font-size:1.4rem;margin-top:0}
+.about-panel p{color:#e3eaf3;position:relative}
+.values{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.value{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px;font-weight:700;color:var(--navy)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{padding:24px;border-left:3px solid var(--gold);background:var(--light);border-radius:0 10px 10px 0}
+.step b{display:block;color:var(--navy);font-size:1.05rem;margin-bottom:6px}
+.step p{margin:0;color:var(--muted);font-size:.95rem}
+.contact{background:var(--navy);color:#fff}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:42px}
+.contact h2{color:#fff}
+.contact .section-head p{color:#dbe3ed}
+.contact-details{display:grid;gap:15px;margin-top:26px}
+.contact-detail{padding:15px;border:1px solid rgba(255,255,255,.2);border-radius:9px}
+.contact-detail small{display:block;color:var(--gold);text-transform:uppercase;letter-spacing:.12em;font-weight:800;margin-bottom:4px}
+.contact-detail span{color:#f3f6fa}
+form{background:#fff;color:var(--ink);border-radius:14px;padding:28px}
+form h3{color:var(--navy);margin:0 0 18px}
+label{display:block;font-weight:700;font-size:.88rem;margin:13px 0 6px}
+input,select,textarea{width:100%;padding:12px;border:1px solid #cfd7e1;border-radius:7px;font:inherit;background:#fff}
+textarea{min-height:110px;resize:vertical}
+.form-note{font-size:.8rem;color:var(--muted);margin:12px 0 0}
+footer{background:#0b1d32;color:#c8d2df;padding:25px 0;font-size:.88rem}
+.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer strong{color:#fff}
+@media(max-width:760px){
+ nav{display:none;position:absolute;left:0;right:0;top:78px;background:#fff;border-bottom:1px solid var(--line);padding:18px 4%;flex-direction:column;align-items:flex-start}
+ nav.open{display:flex}.menu{display:block}
+ .nav>.btn{display:none}
+ .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+ .hero-grid{padding:62px 0;gap:30px}
+ .trust-row{grid-template-columns:1fr;gap:12px}
+ .services,.steps{grid-template-columns:1fr}
+ section{padding:58px 0}
+ .hero-card{max-width:520px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="MVUMBA Projects home">
+      <div class="mark">M</div>
+      <div><div class="brand-name">MVUMBA PROJECTS</div><div class="brand-sub">PTY LTD · SOUTH AFRICA</div></div>
+    </a>
+    <nav id="navlinks">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#approach">Our Approach</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="#contact">Request a Quote</a>
+    <button class="menu" id="menubtn" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Supply · Service · Solutions</div>
+      <h1>Reliable supply.<br>Professional service.</h1>
+      <p>Practical business solutions for organisations that need cleaning consumables, uniforms, workwear and dependable procurement support.</p>
+      <div class="hero-actions"><a class="btn" href="#services">Explore Our Services</a><a class="btn btn-outline" href="#contact">Contact Our Team</a></div>
+    </div>
+    <div class="hero-card">
+      <h2>How we can support you</h2>
+      <ul>
+        <li>Cleaning consumables and hygiene products</li>
+        <li>Uniforms and workwear sourcing</li>
+        <li>Procurement and general supplies</li>
+        <li>Cleaning and facilities services, subject to agreed scope</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<div class="trust"><div class="wrap trust-row">
+  <div class="trust-item"><span class="icon">✓</span><span>Professional communication</span></div>
+  <div class="trust-item"><span class="icon">◆</span><span>Client-focused solutions</span></div>
+  <div class="trust-item"><span class="icon">↗</span><span>Responsive service</span></div>
+</div></div>
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="section-head">
+      <div class="eyebrow">Who we are</div>
+      <h2>Practical solutions for everyday business needs.</h2>
+      <p>MVUMBA Projects (Pty) Ltd is a South African business focused on the supply of cleaning consumables, uniforms and workwear, and related procurement and business support solutions.</p>
+      <p>We aim to build long-term business relationships through professionalism, accountability, clear communication and a commitment to understanding each client's requirements.</p>
+    </div>
+    <div class="about-panel">
+      <h3>Our mission</h3>
+      <p>To provide practical supply and service solutions that help clients meet their operational needs efficiently and professionally.</p>
+      <h3>Our vision</h3>
+      <p>To become a trusted supplier and service provider recognised for reliability, quality and professional business practices.</p>
+    </div>
+  </div>
+</section>
+<section id="services" style="background:#fbfcfd">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What we do</div>
+      <h2>Our products and services</h2>
+      <p>We work to understand your requirements and provide clear information and quotations for the products or services requested.</p>
+    </div>
+    <div class="services">
+      <article class="service"><div class="icon">✦</div><h3>Cleaning Consumables & Hygiene</h3><p>Cleaning materials and hygiene consumables to support workplace cleanliness and day-to-day operations.</p></article>
+      <article class="service"><div class="icon">▣</div><h3>Uniforms & Workwear</h3><p>Sourcing and supply of uniforms and workwear according to client specifications and workplace requirements.</p></article>
+      <article class="service"><div class="icon">⇄</div><h3>Procurement & General Supplies</h3><p>Support with sourcing and supplying products against agreed specifications, availability and client requirements.</p></article>
+      <article class="service"><div class="icon">⌂</div><h3>Cleaning & Facilities Services</h3><p>Cleaning and related facilities support, subject to confirmation of scope, staffing and operational arrangements.</p></article>
+    </div>
+  </div>
+</section>
+<section id="approach">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Our commitment</div>
+      <h2>A straightforward, professional process</h2>
+      <p>We aim to make it easy for clients to communicate their needs and receive a clear response.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><b>01 · Understand</b><p>We listen to your requirements, specifications and delivery expectations.</p></div>
+      <div class="step"><b>02 · Confirm</b><p>We clarify availability, scope, timelines and quotation details before proceeding.</p></div>
+      <div class="step"><b>03 · Deliver</b><p>We work towards meeting agreed requirements and maintaining professional communication.</p></div>
+    </div>
+    <div class="values">
+      <div class="value">Integrity & accountability</div><div class="value">Professionalism</div>
+      <div class="value">Quality & reliability</div><div class="value">Customer service</div>
+    </div>
+  </div>
+</section>
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="section-head">
+        <div class="eyebrow">Contact us</div>
+        <h2>Let's discuss your requirements.</h2>
+        <p>Contact MVUMBA Projects for product enquiries, quotations and service requests. Please replace the placeholder contact details with your confirmed business details before publishing.</p>
+      </div>
+      <div class="contact-details">
+        <div class="contact-detail"><small>Business</small><span>MVUMBA Projects (Pty) Ltd</span></div>
+        <div class="contact-detail"><small>Telephone</small><span>0840788605</span></div>
+        <div class="contact-detail"><small>Email</small><span>nok2lajiyane@gmail.com</span></div>
+        <div class="contact-detail"><small>Location</small><span>Gauteng, South Africa</span></div>
+      </div>
+    </div>
+    <form id="contactform">
+      <h3>Send an enquiry</h3>
+      <label for="name">Your name</label><input id="name" name="name" required placeholder="Full name">
+      <label for="business">Company / organisation</label><input id="business" name="business" placeholder="Company name">
+      <label for="email">Email address</label><input id="email" name="email" type="email" required placeholder="you@example.com">
+      <label for="interest">What are you enquiring about?</label>
+      <select id="interest" name="interest"><option>Cleaning consumables and hygiene</option><option>Uniforms and workwear</option><option>Procurement and general supplies</option><option>Cleaning and facilities services</option><option>Other enquiry</option></select>
+      <label for="message">Your message</label><textarea id="message" name="message" required placeholder="Tell us what you need..."></textarea>
+      <button class="btn" type="submit">Prepare Enquiry Email</button>
+      <p class="form-note">This form opens your email application and does not store or send data on this website. Add your confirmed business email address in the website code before launch.</p>
+    </form>
+  </div>
+</section>
+</main>
+<footer><div class="wrap footer-row"><div><strong>MVUMBA Projects (Pty) Ltd</strong><br>Reliable Supply. Professional Service. Practical Solutions.</div><div>© <span id="year"></span> MVUMBA Projects (Pty) Ltd. All rights reserved.</div></div></footer>
+<script>
+const menuButton=document.getElementById('menubtn');
+const nav=document.getElementById('navlinks');
+menuButton.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuButton.setAttribute('aria-expanded','false');}));
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('contactform').addEventListener('submit',function(e){
+ e.preventDefault();
+ const businessEmail='nok2lajiyane@gmail.com';
+ if(businessEmail==='REPLACE_WITH_YOUR_BUSINESS_EMAIL'){alert('Please add your confirmed business email address to the website before using the enquiry form. You can publish the site after adding your contact details.');return;}
+ const data=new FormData(this);
+ const subject=encodeURIComponent('Website enquiry: '+data.get('interest'));
+ const body=encodeURIComponent('Name: '+data.get('name')+'\nCompany: '+data.get('business')+'\nReply email: '+data.get('email')+'\nEnquiry: '+data.get('interest')+'\n\nMessage:\n'+data.get('message'));
+ window.location.href='mailto:'+businessEmail+'?subject='+subject+'&body='+body;
+});
+</script>
+</body>
+</html>
